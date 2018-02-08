@@ -55,7 +55,7 @@ endif()
 
 # Look for Boost (just need boost.optional headers here)
 find_package(Boost REQUIRED ${FIND_PACKAGE_QUIET})
-find_package(RdKafka REQUIRED ${FIND_PACKAGE_QUIET})
+#find_package(RdKafka REQUIRED ${FIND_PACKAGE_QUIET})
 
 if (Boost_FOUND)
     find_package(Boost COMPONENTS program_options ${FIND_PACKAGE_QUIET})
