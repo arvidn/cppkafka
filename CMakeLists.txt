@@ -37,7 +37,7 @@ endif()
 
 # Look for Boost (just need boost.optional headers here)
 find_package(Boost REQUIRED)
-find_package(RdKafka REQUIRED)
+#find_package(RdKafka REQUIRED)
 
 add_subdirectory(src)
 add_subdirectory(include)
