@@ -217,6 +217,7 @@ vector<Message> Consumer::poll_batch(size_t max_batch_size, milliseconds timeout
     rd_kafka_queue_t* queue = rd_kafka_queue_get_consumer(get_handle());
     ssize_t result = rd_kafka_consume_batch_queue(queue, timeout.count(), raw_messages.data(),
                                                   raw_messages.size());
+    rd_kafka_queue_destroy(queue);
     if (result == -1) {
         check_error(rd_kafka_last_error());
     }
