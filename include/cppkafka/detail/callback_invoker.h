@@ -42,7 +42,7 @@ template <typename T>
 T error_value() { return T{}; }
 
 template<> inline
-void error_value<void>() {};
+void error_value<void>() {}
 
 template<> inline
 bool error_value<bool>() { return false; }
